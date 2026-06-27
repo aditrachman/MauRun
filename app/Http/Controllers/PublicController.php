@@ -72,7 +72,7 @@ class PublicController extends Controller
 
         Registration::create($data);
 
-        return redirect()->route('public.my-events')->with('success', 'Pendaftaran berhasil! Biaya: Rp ' . number_format($price, 0, ',', '.'));
+        return redirect()->route('public.my-events')->with('success', 'Hai ' . $data['full_name'] . ', pendaftaran kamu berhasil! Biaya: Rp ' . number_format($price, 0, ',', '.'));
     }
 
     public function myEvents()

@@ -17,19 +17,21 @@
 
     {{-- Flash messages --}}
     @if(session('success'))
-        <div class="max-w-5xl mx-auto mt-20 px-6">
+        <div class="max-w-5xl mx-auto mt-20 px-6 flash-notif">
             <div class="bg-cream border border-beige-deep text-ink px-5 py-3 rounded-lg text-sm flex items-center gap-3" role="alert">
-                <span class="text-primary">✓</span>
-                <p>{{ session('success') }}</p>
+                <span class="text-primary shrink-0">✓</span>
+                <p class="flex-1">{{ session('success') }}</p>
+                <button onclick="this.closest('.flash-notif').remove()" class="text-steel hover:text-charcoal transition shrink-0 ml-2">&times;</button>
             </div>
         </div>
     @endif
 
     @if(session('error'))
-        <div class="max-w-5xl mx-auto mt-20 px-6">
+        <div class="max-w-5xl mx-auto mt-20 px-6 flash-notif">
             <div class="bg-red-50 border border-red-200 text-red-700 px-5 py-3 rounded-lg text-sm flex items-center gap-3" role="alert">
-                <span>✕</span>
-                <p>{{ session('error') }}</p>
+                <span class="shrink-0">✕</span>
+                <p class="flex-1">{{ session('error') }}</p>
+                <button onclick="this.closest('.flash-notif').remove()" class="text-red-400 hover:text-red-600 transition shrink-0 ml-2">&times;</button>
             </div>
         </div>
     @endif
@@ -94,6 +96,20 @@
             </div>
         </div>
     </footer>
+
+    {{-- Auto-dismiss flash notifications --}}
+    <script>
+    (function() {
+        const notifs = document.querySelectorAll('.flash-notif');
+        notifs.forEach(function(el) {
+            setTimeout(function() {
+                el.style.transition = 'opacity 0.3s';
+                el.style.opacity = '0';
+                setTimeout(function() { el.remove(); }, 300);
+            }, 5000);
+        });
+    })();
+    </script>
 
     {{-- Transparent nav scroll behavior --}}
     <script>

@@ -1,6 +1,6 @@
 <x-app-layout>
-    <div class="max-w-4xl mx-auto px-4 pt-4 pb-8">
-        <div class="mb-5">
+    <div class="max-w-4xl mx-auto px-4 pt-0 pb-8">
+        <div class="mb-6 border-b border-hairline-soft pb-5">
             <p class="text-xs font-semibold text-primary uppercase tracking-[1.5px]">Peserta</p>
             <h2 class="font-display text-2xl md:text-3xl text-ink font-normal leading-tight mt-1">Event Saya</h2>
         </div>
