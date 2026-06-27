@@ -1,0 +1,66 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e6]:
+      - link "Mau Run" [ref=e7] [cursor=pointer]:
+        - /url: http://127.0.0.1:8000
+        - img "Mau Run" [ref=e8]
+      - generic [ref=e9]:
+        - link "Login" [ref=e10] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/login
+        - link "Register" [ref=e11] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/register
+        - button "Toggle menu" [ref=e12] [cursor=pointer]:
+          - img [ref=e13]
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - paragraph [ref=e19]: Detail Event
+          - heading "genjreng mlayu" [level=2] [ref=e20]
+        - link "← Kembali" [ref=e21] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/events
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - generic [ref=e24]: 10K
+          - heading "genjreng mlayu" [level=1] [ref=e25]
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - generic [ref=e28]:
+              - paragraph [ref=e29]: Kota
+              - paragraph [ref=e30]: Bandung
+            - generic [ref=e31]:
+              - paragraph [ref=e32]: Tanggal
+              - paragraph [ref=e33]: 26 June 2026
+            - generic [ref=e34]:
+              - paragraph [ref=e35]: Harga
+              - paragraph [ref=e36]: Rp 80.000
+            - generic [ref=e37]:
+              - paragraph [ref=e38]: Kuota
+              - paragraph [ref=e39]: 2 / 2 tersisa
+          - generic [ref=e40]:
+            - paragraph [ref=e41]: Deskripsi
+            - paragraph [ref=e42]: ini mlaty
+          - link "Login untuk Mendaftar" [ref=e44] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/login
+  - contentinfo [ref=e46]:
+    - generic [ref=e47]:
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - link "Mau Run" [ref=e50] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000
+            - img "Mau Run" [ref=e51]
+          - paragraph [ref=e52]: Platform pendaftaran event lari Indonesia — dari 3K sampai Full Marathon.
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - paragraph [ref=e55]: Jelajahi
+            - link "Semua Event" [ref=e56] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/events
+          - generic [ref=e57]:
+            - paragraph [ref=e58]: Akun
+            - link "Masuk" [ref=e59] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/login
+            - link "Daftar" [ref=e60] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/register
+      - generic [ref=e61]:
+        - paragraph [ref=e62]: © 2026 Mau Run
+        - paragraph [ref=e63]: Muhammad Aditya Rachman — 2405040018

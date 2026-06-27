@@ -1,0 +1,149 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e6]:
+      - link "Mau Run" [ref=e7] [cursor=pointer]:
+        - /url: http://127.0.0.1:8000
+        - img "Mau Run" [ref=e8]
+      - generic [ref=e9]:
+        - link "Login" [ref=e10] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/login
+        - link "Register" [ref=e11] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/register
+        - button "Toggle menu" [ref=e12] [cursor=pointer]:
+          - img [ref=e13]
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e19]:
+          - paragraph [ref=e20]: Event
+          - heading "Semua Event Lari" [level=2] [ref=e21]
+        - generic [ref=e22]:
+          - generic [ref=e23]:
+            - generic [ref=e24]: Jenis
+            - combobox [ref=e25]:
+              - option "Semua" [selected]
+              - option "10K"
+              - option "3K"
+              - option "5K"
+              - option "Full Maraton"
+              - option "Half Maraton"
+          - generic [ref=e26]:
+            - generic [ref=e27]: Kota
+            - combobox [ref=e28]:
+              - option "Semua Kota" [selected]
+              - option "Bali"
+              - option "Bandung"
+              - option "Jakarta"
+              - option "Kendal"
+              - option "Probolinggo"
+              - option "Semarang"
+              - option "Surabaya"
+              - option "Yogyakarta"
+          - button "Filter" [ref=e29] [cursor=pointer]
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - link "10K Bandung genjreng mlayu" [ref=e32] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/events/5
+            - generic [ref=e35]: 10K
+            - generic [ref=e36]: Bandung
+            - heading "genjreng mlayu" [level=3] [ref=e38]
+          - generic [ref=e39]:
+            - generic [ref=e40]:
+              - generic [ref=e41]: 📅 26 Jun 2026
+              - generic [ref=e42]: Rp 80.000
+            - generic [ref=e43]:
+              - generic [ref=e44]: 👥 Sisa 2 / 2
+              - link "Detail →" [ref=e45] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/events/5
+            - link "Login untuk Daftar" [ref=e47] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/login
+        - generic [ref=e48]:
+          - link "Grow Run 2026 Full Maraton Yogyakarta Grow Run 2026" [ref=e49] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/events/1
+            - img "Grow Run 2026" [ref=e50]
+            - generic [ref=e52]: Full Maraton
+            - generic [ref=e53]: Yogyakarta
+            - heading "Grow Run 2026" [level=3] [ref=e55]
+          - generic [ref=e56]:
+            - generic [ref=e57]:
+              - generic [ref=e58]: 📅 15 Feb 2026
+              - generic [ref=e59]: Rp 200.000
+            - generic [ref=e60]:
+              - generic [ref=e61]: 👥 Sisa 2000 / 2000
+              - link "Detail →" [ref=e62] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/events/1
+            - link "Login untuk Daftar" [ref=e64] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/login
+        - generic [ref=e65]:
+          - link "H Run 2026 5K Yogyakarta H Run 2026" [ref=e66] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/events/2
+            - img "H Run 2026" [ref=e67]
+            - generic [ref=e69]: 5K
+            - generic [ref=e70]: Yogyakarta
+            - heading "H Run 2026" [level=3] [ref=e72]
+          - generic [ref=e73]:
+            - generic [ref=e74]:
+              - generic [ref=e75]: 📅 28 May 2026
+              - generic [ref=e76]: Rp 100.000
+            - generic [ref=e77]:
+              - generic [ref=e78]: 👥 Sisa 5000 / 5000
+              - link "Detail →" [ref=e79] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/events/2
+            - link "Login untuk Daftar" [ref=e81] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/login
+        - generic [ref=e82]:
+          - link "HRSIY PDHI Fun Run 10K Jakarta HRSIY PDHI Fun Run" [ref=e83] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/events/3
+            - img "HRSIY PDHI Fun Run" [ref=e84]
+            - generic [ref=e86]: 10K
+            - generic [ref=e87]: Jakarta
+            - heading "HRSIY PDHI Fun Run" [level=3] [ref=e89]
+          - generic [ref=e90]:
+            - generic [ref=e91]:
+              - generic [ref=e92]: 📅 08 Jul 2026
+              - generic [ref=e93]: Rp 500.000
+            - generic [ref=e94]:
+              - generic [ref=e95]: 👥 Sisa 5000 / 5000
+              - link "Detail →" [ref=e96] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/events/3
+            - link "Login untuk Daftar" [ref=e98] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/login
+        - generic [ref=e99]:
+          - link "Sae Run 3K Probolinggo Sae Run" [ref=e100] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/events/4
+            - img "Sae Run" [ref=e101]
+            - generic [ref=e103]: 3K
+            - generic [ref=e104]: Probolinggo
+            - heading "Sae Run" [level=3] [ref=e106]
+          - generic [ref=e107]:
+            - generic [ref=e108]:
+              - generic [ref=e109]: 📅 08 Feb 2026
+              - generic [ref=e110]: Rp 400.000
+            - generic [ref=e111]:
+              - generic [ref=e112]: 👥 Sisa 499 / 500
+              - link "Detail →" [ref=e113] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/events/4
+            - link "Login untuk Daftar" [ref=e115] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/login
+  - contentinfo [ref=e117]:
+    - generic [ref=e118]:
+      - generic [ref=e119]:
+        - generic [ref=e120]:
+          - link "Mau Run" [ref=e121] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000
+            - img "Mau Run" [ref=e122]
+          - paragraph [ref=e123]: Platform pendaftaran event lari Indonesia — dari 3K sampai Full Marathon.
+        - generic [ref=e124]:
+          - generic [ref=e125]:
+            - paragraph [ref=e126]: Jelajahi
+            - link "Semua Event" [ref=e127] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/events
+          - generic [ref=e128]:
+            - paragraph [ref=e129]: Akun
+            - link "Masuk" [ref=e130] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/login
+            - link "Daftar" [ref=e131] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/register
+      - generic [ref=e132]:
+        - paragraph [ref=e133]: © 2026 Mau Run
+        - paragraph [ref=e134]: Muhammad Aditya Rachman — 2405040018

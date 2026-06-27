@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Transparent nav — default (over hero) */
+.nav-link { @apply text-white/80 hover:text-white transition-colors duration-300; }
+.nav-link-mobile { @apply text-white/70 hover:text-white transition-colors duration-300; }
+.nav-text-muted { @apply text-white/60; }
+.nav-btn-solid { @apply bg-white text-ink hover:bg-white/90 transition-colors duration-300; }
+
+/* Solid nav — scrolled */
+#navbar.nav-scrolled .nav-link { @apply text-charcoal hover:text-ink hover:bg-surface; }
+#navbar.nav-scrolled .nav-link-mobile { @apply text-charcoal hover:text-ink hover:bg-surface; }
+#navbar.nav-scrolled .nav-text-muted { @apply text-steel; }
+#navbar.nav-scrolled .nav-btn-solid { @apply bg-ink text-on-dark hover:bg-charcoal; }
+#navbar.nav-scrolled #mobile-menu { @apply border-t border-hairline-soft; }
+
+/* Image overlay gradient for event cards */
+.event-card-overlay {
+    background: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.6) 0%,
+        rgba(0,0,0,0.1) 60%,
+        rgba(0,0,0,0.05) 100%
+    );
+}
+
+/* Glass badge */
+.glass-badge {
+    @apply bg-white/20 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide border border-white/10;
+}
+
+/* Hover lift */
+.card-lift {
+    @apply transition-all duration-300;
+}
+.card-lift:hover {
+    transform: translateY(-4px);
+    @apply shadow-xl;
+}
+
+/* Sponsor fade-in on scroll */
+.sponsor-logo {
+    @apply transition-all duration-500;
+}
+.sponsor-logo:hover {
+    @apply opacity-100 scale-110;
+}

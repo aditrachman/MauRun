@@ -1,0 +1,163 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e6]:
+      - link "Mau Run" [ref=e7] [cursor=pointer]:
+        - /url: http://127.0.0.1:8000
+        - img "Mau Run" [ref=e8]
+      - generic [ref=e9]:
+        - link "Login" [ref=e10] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/login
+        - link "Register" [ref=e11] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/register
+        - button "Toggle menu" [ref=e12] [cursor=pointer]:
+          - img [ref=e13]
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e19]: "');\">"
+      - generic [ref=e21]:
+        - paragraph [ref=e22]: "#MauRun · Indonesia"
+        - heading "Lari. Taklukan. Menang." [level=1] [ref=e23]:
+          - text: Lari.
+          - text: Taklukan.
+          - text: Menang.
+        - paragraph [ref=e24]: Platform pendaftaran event lari Indonesia — dari 3K sampai Full Marathon.
+        - generic [ref=e25]:
+          - link "Lihat Semua Event" [ref=e26] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/events
+            - text: Lihat Semua Event
+            - img [ref=e27]
+          - link "Daftar Gratis" [ref=e29] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/register
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - paragraph [ref=e32]: 50+
+            - paragraph [ref=e33]: Event Aktif
+          - generic [ref=e34]:
+            - paragraph [ref=e35]: 10K+
+            - paragraph [ref=e36]: Pelari Terdaftar
+          - generic [ref=e37]:
+            - paragraph [ref=e38]: 30+
+            - paragraph [ref=e39]: Kota
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - paragraph [ref=e43]: Terbaru
+          - heading "Event Pilihan" [level=2] [ref=e44]
+        - link "Semua event" [ref=e45] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/events
+          - text: Semua event
+          - img [ref=e46]
+      - generic [ref=e48]:
+        - 'link "10K Bandung Rp 80.000 📅 26 Jun 2026 genjreng mlayu 👥 Sisa kuota: 2 Daftar" [ref=e49] [cursor=pointer]':
+          - /url: http://127.0.0.1:8000/events/5
+          - generic:
+            - generic [ref=e50]: 10K
+            - generic [ref=e51]: Bandung
+            - generic [ref=e52]: Rp 80.000
+          - generic [ref=e53]:
+            - generic [ref=e55]: 📅 26 Jun 2026
+            - heading "genjreng mlayu" [level=3] [ref=e56]
+            - generic [ref=e57]:
+              - generic [ref=e58]:
+                - generic [ref=e59]: "👥 Sisa kuota:"
+                - generic [ref=e60]: "2"
+              - generic [ref=e61]:
+                - text: Daftar
+                - img [ref=e62]
+        - 'link "Grow Run 2026 Full Maraton Yogyakarta Rp 200.000 📅 15 Feb 2026 Grow Run 2026 👥 Sisa kuota: 2000 Daftar" [ref=e64] [cursor=pointer]':
+          - /url: http://127.0.0.1:8000/events/1
+          - generic [ref=e65]:
+            - img "Grow Run 2026" [ref=e66]
+            - generic [ref=e68]: Full Maraton
+            - generic [ref=e69]: Yogyakarta
+            - generic [ref=e70]: Rp 200.000
+          - generic [ref=e71]:
+            - generic [ref=e73]: 📅 15 Feb 2026
+            - heading "Grow Run 2026" [level=3] [ref=e74]
+            - generic [ref=e75]:
+              - generic [ref=e76]:
+                - generic [ref=e77]: "👥 Sisa kuota:"
+                - generic [ref=e78]: "2000"
+              - generic [ref=e79]:
+                - text: Daftar
+                - img [ref=e80]
+        - 'link "H Run 2026 5K Yogyakarta Rp 100.000 📅 28 May 2026 H Run 2026 👥 Sisa kuota: 5000 Daftar" [ref=e82] [cursor=pointer]':
+          - /url: http://127.0.0.1:8000/events/2
+          - generic [ref=e83]:
+            - img "H Run 2026" [ref=e84]
+            - generic [ref=e86]: 5K
+            - generic [ref=e87]: Yogyakarta
+            - generic [ref=e88]: Rp 100.000
+          - generic [ref=e89]:
+            - generic [ref=e91]: 📅 28 May 2026
+            - heading "H Run 2026" [level=3] [ref=e92]
+            - generic [ref=e93]:
+              - generic [ref=e94]:
+                - generic [ref=e95]: "👥 Sisa kuota:"
+                - generic [ref=e96]: "5000"
+              - generic [ref=e97]:
+                - text: Daftar
+                - img [ref=e98]
+    - generic [ref=e101]:
+      - paragraph [ref=e102]: Didukung Oleh
+      - generic [ref=e103]:
+        - img "Partner" [ref=e105]
+        - img "Partner" [ref=e107]
+        - img "Partner" [ref=e109]
+        - img "Partner" [ref=e111]
+        - img "Partner" [ref=e113]
+        - img "Partner" [ref=e115]
+    - generic [ref=e117]:
+      - generic [ref=e118]:
+        - paragraph [ref=e119]: Kenapa Mau Run
+        - heading "Dirancang untuk setiap pelari." [level=2] [ref=e120]:
+          - text: Dirancang untuk
+          - text: setiap pelari.
+        - paragraph [ref=e121]: Dari pemula sampai pelari pro — Mau Run bikin kamu gampang nemuin event lari, daftar dalam hitungan menit, dan jadi bagian dari komunitas lari Indonesia.
+      - generic [ref=e122]:
+        - generic [ref=e123]:
+          - generic [ref=e124]: 📱
+          - heading "Mudah Daftar" [level=3] [ref=e125]
+          - paragraph [ref=e126]: Daftar dalam hitungan menit langsung dari gadget kamu — tanpa ribet, tanpa antrian.
+        - generic [ref=e127]:
+          - generic [ref=e128]: 🏅
+          - heading "Banyak Pilihan" [level=3] [ref=e129]
+          - paragraph [ref=e130]: Dari 3K fun run sampai Full Marathon 42K — ada kategori untuk semua level pelari.
+        - generic [ref=e131]:
+          - generic [ref=e133]: 💰
+          - heading "Harga Bersahabat" [level=3] [ref=e134]
+          - paragraph [ref=e135]: Gunakan kode diskon D-10, D-20, atau D-50 saat checkout.
+    - generic [ref=e139]:
+      - generic [ref=e140]:
+        - paragraph [ref=e141]: Mulai Sekarang
+        - heading "Event berikutnya menantimu." [level=2] [ref=e142]
+        - paragraph [ref=e143]: Ribuan pelari sudah bergabung. Temukan event di kotamu.
+      - generic [ref=e144]:
+        - link "Lihat Event Sekarang" [ref=e145] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/events
+          - text: Lihat Event Sekarang
+          - img [ref=e146]
+        - link "Buat Akun" [ref=e148] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/register
+  - contentinfo [ref=e150]:
+    - generic [ref=e151]:
+      - generic [ref=e152]:
+        - generic [ref=e153]:
+          - link "Mau Run" [ref=e154] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000
+            - img "Mau Run" [ref=e155]
+          - paragraph [ref=e156]: Platform pendaftaran event lari Indonesia — dari 3K sampai Full Marathon.
+        - generic [ref=e157]:
+          - generic [ref=e158]:
+            - paragraph [ref=e159]: Jelajahi
+            - link "Semua Event" [ref=e160] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/events
+          - generic [ref=e161]:
+            - paragraph [ref=e162]: Akun
+            - link "Masuk" [ref=e163] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/login
+            - link "Daftar" [ref=e164] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/register
+      - generic [ref=e165]:
+        - paragraph [ref=e166]: © 2026 Mau Run
+        - paragraph [ref=e167]: Muhammad Aditya Rachman — 2405040018
