@@ -39,8 +39,10 @@ php artisan serve
 
 ## Akun Demo
 
-- Admin: `admin@maurun.test` / `password`
-- User: `user@maurun.test` / `password`
+| Role | Email | Password |
+|------|-------|----------|
+| **Admin (Penyelenggara)** | `admin@maurun.com` | `password` |
+| **Peserta** | `peserta@maurun.com` | `password` |
 
 ## Credits
 
