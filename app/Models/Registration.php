@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Registration extends Model
 {
     protected $fillable = [
-        'user_id', 'event_id', 'full_name', 'email', 'phone',
+        'user_id', 'event_id', 'nik', 'full_name', 'email', 'phone',
         'gender', 'jersey_size', 'coupon_code', 'final_price'
     ];
 

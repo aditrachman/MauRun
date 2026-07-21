@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="font-sans antialiased bg-canvas text-ink">
+<body class="font-sans antialiased bg-canvas text-ink min-h-screen flex flex-col">
 
     {{-- Navigation --}}
     @include('layouts.navigation')
@@ -44,7 +44,7 @@
         </header>
     @endisset
 
-    <main class="pt-16">
+    <main class="flex-1 pt-16">
         {{ $slot }}
     </main>
 

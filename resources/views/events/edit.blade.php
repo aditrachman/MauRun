@@ -8,7 +8,7 @@
             <a href="{{ route('admin.events.index') }}" class="text-primary hover:text-primary-deep text-sm font-medium transition shrink-0">← Kembali</a>
         </div>
         <div class="bg-cream border border-beige-deep rounded-lg p-6 md:p-8">
-            <form method="POST" action="{{ route('admin.events.update', $event) }}" class="space-y-4">
+            <form method="POST" action="{{ route('admin.events.update', $event) }}" enctype="multipart/form-data" class="space-y-4">
                 @csrf @method('PUT')
 
                 <div>
@@ -71,12 +71,43 @@
                 </div>
 
                 <div>
-                    <label class="block text-sm font-medium text-charcoal mb-1">Path Gambar</label>
-                    <input type="text" name="image" value="{{ old('image', $event->image) }}" placeholder="events/nama-file.webp"
-                        class="w-full rounded-md border-hairline-strong bg-canvas text-sm text-ink px-3 py-2.5 focus:border-primary focus:ring-primary">
-                    <p class="text-xs text-steel mt-1">Relatif terhadap <code class="text-primary">public/assets/</code></p>
+                    <label class="block text-sm font-medium text-charcoal mb-1">Gambar Event</label>
+                    @if($event->image)
+                        <div class="mb-3">
+                            <img src="{{ asset('assets/' . $event->image) }}" alt="{{ $event->name }}" class="h-28 w-auto rounded-lg border border-beige-deep object-cover shadow-xs">
+                        </div>
+                    @endif
+                    <div class="custom-file-wrapper relative">
+                        <input type="file" name="image" id="image-input" accept="image/jpeg,image/png,image/jpg,image/gif,image/webp" class="hidden">
+                        <label for="image-input" class="flex items-center gap-3 w-full rounded-md border border-dashed border-beige-deep bg-canvas px-4 py-3 cursor-pointer hover:border-primary hover:bg-primary/5 transition group">
+                            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-on-dark transition">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            </span>
+                            <span class="flex-1 min-w-0">
+                                <span class="file-label block text-sm font-medium text-charcoal">Ganti Gambar</span>
+                                <span class="file-name block text-xs text-steel truncate mt-0.5">Klik untuk upload file baru</span>
+                            </span>
+                            <span class="text-xs font-medium text-primary border border-primary/30 rounded-md px-3 py-1 group-hover:bg-primary group-hover:text-on-dark transition">Browse</span>
+                        </label>
+                    </div>
+                    <p class="text-xs text-steel mt-2">Format: <strong class="text-charcoal">JPG, PNG, WEBP</strong> · Maks: <strong class="text-charcoal">2 MB</strong>. Kosongkan jika tidak ingin ganti.</p>
                     @error('image') <p class="text-primary text-xs mt-1">{{ $message }}</p> @enderror
                 </div>
+
+                <script>
+                    document.getElementById('image-input')?.addEventListener('change', function(e) {
+                        const wrapper = this.closest('.custom-file-wrapper');
+                        const label = wrapper.querySelector('.file-label');
+                        const name = wrapper.querySelector('.file-name');
+                        if (this.files && this.files[0]) {
+                            label.textContent = this.files[0].name;
+                            name.textContent = (this.files[0].size / 1024).toFixed(1) + ' KB';
+                        } else {
+                            label.textContent = 'Ganti Gambar';
+                            name.textContent = 'Klik untuk upload file baru';
+                        }
+                    });
+                </script>
 
                 <button type="submit" class="w-full bg-ink hover:bg-charcoal text-on-dark text-sm font-medium py-3 rounded-md transition">
                     Update Event →

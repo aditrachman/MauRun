@@ -6,6 +6,7 @@ use App\Models\City;
 use App\Models\Event;
 use App\Models\EventType;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class EventController extends Controller
 {
@@ -32,8 +33,18 @@ class EventController extends Controller
             'price' => 'required|integer|min:0',
             'quota' => 'required|integer|min:1',
             'description' => 'nullable|string',
-            'image' => 'nullable|string|max:255',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
         ]);
+
+        if ($request->hasFile('image')) {
+            $dir = public_path('assets/events');
+            if (!File::isDirectory($dir)) File::makeDirectory($dir, 0755, true);
+
+            $ext = $request->file('image')->extension();
+            $filename = time() . '_' . str_replace(' ', '_', $request->name) . '.' . $ext;
+            $request->file('image')->move($dir, $filename);
+            $data['image'] = 'events/' . $filename;
+        }
 
         Event::create($data);
 
@@ -57,8 +68,24 @@ class EventController extends Controller
             'price' => 'required|integer|min:0',
             'quota' => 'required|integer|min:1',
             'description' => 'nullable|string',
-            'image' => 'nullable|string|max:255',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
         ]);
+
+        if ($request->hasFile('image')) {
+            // Hapus file lama
+            if ($event->image) {
+                $oldPath = public_path('assets/' . $event->image);
+                if (File::exists($oldPath)) File::delete($oldPath);
+            }
+
+            $dir = public_path('assets/events');
+            if (!File::isDirectory($dir)) File::makeDirectory($dir, 0755, true);
+
+            $ext = $request->file('image')->extension();
+            $filename = time() . '_' . str_replace(' ', '_', $request->name) . '.' . $ext;
+            $request->file('image')->move($dir, $filename);
+            $data['image'] = 'events/' . $filename;
+        }
 
         $event->update($data);
 

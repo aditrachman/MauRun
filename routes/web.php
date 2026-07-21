@@ -26,6 +26,7 @@ Route::get('/events/{event}', [PublicController::class, 'showEvent'])->name('pub
 Route::middleware('auth')->group(function () {
     Route::get('/events/{event}/register', [PublicController::class, 'registerForm'])->name('public.register-form');
     Route::post('/events/{event}/register', [PublicController::class, 'registerStore'])->name('public.register-store');
+    Route::get('/events/{event}/registration/{registration}/invoice', [PublicController::class, 'invoice'])->name('public.invoice');
     Route::get('/my-events', [PublicController::class, 'myEvents'])->name('public.my-events');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

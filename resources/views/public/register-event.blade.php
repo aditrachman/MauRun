@@ -18,6 +18,13 @@
                 @csrf
 
                 <div>
+                    <label class="block text-sm font-medium text-charcoal mb-1">NIK <span class="text-primary">*</span></label>
+                    <input type="text" name="nik" value="{{ old('nik') }}" required maxlength="20"
+                        class="w-full rounded-md border-hairline-strong bg-canvas text-sm text-ink px-3 py-2.5 focus:border-primary focus:ring-primary" placeholder="Nomor Induk Kependudukan">
+                    @error('nik') <p class="text-primary text-xs mt-1">{{ $message }}</p> @enderror
+                </div>
+
+                <div>
                     <label class="block text-sm font-medium text-charcoal mb-1">Nama Lengkap <span class="text-primary">*</span></label>
                     <input type="text" name="full_name" value="{{ old('full_name') }}" required
                         class="w-full rounded-md border-hairline-strong bg-canvas text-sm text-ink px-3 py-2.5 focus:border-primary focus:ring-primary">

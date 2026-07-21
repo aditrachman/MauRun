@@ -51,6 +51,7 @@ class PublicController extends Controller
     public function registerStore(Request $request, Event $event)
     {
         $data = $request->validate([
+            'nik' => 'required|string|max:20|unique:registrations,nik',
             'full_name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'phone' => 'required|string|max:20',
@@ -70,9 +71,15 @@ class PublicController extends Controller
         $data['event_id'] = $event->id;
         $data['final_price'] = $price;
 
-        Registration::create($data);
+        $registration = Registration::create($data);
 
-        return redirect()->route('public.my-events')->with('success', 'Hai ' . $data['full_name'] . ', pendaftaran kamu berhasil! Biaya: Rp ' . number_format($price, 0, ',', '.'));
+        return redirect()->route('public.invoice', [$event, $registration]);
+    }
+
+    public function invoice(Event $event, Registration $registration)
+    {
+        $registration->load('event.eventType', 'event.city');
+        return view('public.invoice', compact('event', 'registration'));
     }
 
     public function myEvents()

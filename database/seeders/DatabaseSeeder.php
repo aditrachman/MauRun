@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
 
         // Admin user (penyelenggara)
         User::factory()->create([
+            'username' => 'admin',
             'name' => 'Admin Mau Run',
             'email' => 'admin@maurun.com',
             'password' => bcrypt('password'),
@@ -25,6 +26,7 @@ class DatabaseSeeder extends Seeder
 
         // Contoh peserta
         User::factory()->create([
+            'username' => 'peserta',
             'name' => 'Peserta Demo',
             'email' => 'peserta@maurun.com',
             'password' => bcrypt('password'),
